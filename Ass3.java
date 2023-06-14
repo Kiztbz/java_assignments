@@ -314,7 +314,7 @@ public class Ass3
                 else if(n==(334+2))
                 System.out.print("2ND DECEMBER, "+y);
                 else if(n==(334+3))
-                System.out.print("3RD DECEMBER, "+y);
+                System.out.print("32RD DECEMBER, "+y);
                 else
                 System.out.print((n-334)+"TH DECEMBER, "+y);
             }
