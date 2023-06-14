@@ -5,6 +5,7 @@ public class Ass3
     //instance variables
     int num, y, N;
     
+    //constructor
     Ass3()
     {
         num = 0;
@@ -12,6 +13,7 @@ public class Ass3
         N = 0;
     }
 
+    //method to take input
     void input()
     {
         Scanner sc = new Scanner(System.in);
@@ -39,6 +41,7 @@ public class Ass3
         sc.close();
     }
 
+    //method to check if year is a leap year
     boolean leap(int year)
     {
         if(year%4==0)
@@ -47,8 +50,10 @@ public class Ass3
         return false;
     }
 
+    //method to turn number into date
     void day(int n)
     {
+        //for leap year
         if(leap(y)==true)
         {
             if(n>0 && n<=31)
@@ -184,6 +189,7 @@ public class Ass3
                 System.out.print((n-335)+"TH DECEMBER, "+y);
             }
         }
+        //for non-leap year
         else
         {
             if(n>0 && n<=31)
@@ -321,6 +327,7 @@ public class Ass3
         }
     }
 
+    //method to display data
     void display()
     {
         System.out.print("\nDATE : ");
@@ -331,6 +338,7 @@ public class Ass3
         System.out.println("\n");
     }
 
+    //main method
     public static void main(String[] args)
     {
         Ass3 obj = new Ass3();
