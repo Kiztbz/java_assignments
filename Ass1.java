@@ -2,12 +2,17 @@
 import java.util.Scanner;
 public class Ass1
 {
-    int n; 
+    int n, r, b48, b24, b12, b6;
 
     //constructor
     Ass1()
     {
         n = 0;
+        r = 0;
+        b48 = 0;
+        b24 = 0;
+        b12 = 0;
+        b6 = 0;
     }
 
     //method to take input
@@ -27,12 +32,20 @@ public class Ass1
     //assigning boxes
     void div()
     {
-        int b48 = n/48;
-        int b24 = (n-(b48*48))/24;
-        int b12 = (n-(b48*48)-(b24*24))/12;
-        int b6 = (n-(b48*48)-(b24*24)-(b12*12))/6;
+        b48 = n/48;
+        b24 = (n-(b48*48))/24;
+        b12 = (n-(b48*48)-(b24*24))/12;
+        b6 = (n-(b48*48)-(b24*24)-(b12*12))/6;
+        r = n-(b48*48)-(b24*24)-(b12*12)-(b6*6);
+    }
 
+    //method to display output
+    void display()
+    {
+        if(r==0)
         System.out.println("48 * "+b48+" = "+48*b48+"\n24 * "+b24+" = "+24*b24+"\n12 * "+b12+" = "+12*b12+"\n6 * "+b6+" = "+6*b6+"\nTotal number of boxes = "+n+"\nTotal number of cartons = "+(b48+b24+b12+b6));
+        else
+        System.out.println("48 * "+b48+" = "+48*b48+"\n24 * "+b24+" = "+24*b24+"\n12 * "+b12+" = "+12*b12+"\n6 * "+b6+" = "+6*b6+"\nRemaining boxes = "+r+"\nTotal number of boxes = "+n+"\nTotal number of cartons = "+(b48+b24+b12+b6+1));
     }
 
     //main method
@@ -41,5 +54,6 @@ public class Ass1
         Ass1 obj = new Ass1();
         obj.input();
         obj.div();
+        obj.display();
     }
 }
